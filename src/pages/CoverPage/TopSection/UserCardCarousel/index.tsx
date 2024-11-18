@@ -36,7 +36,7 @@ const UserCardCarousel: React.FC<UserCardCarouselProps> = ({ users }) => {
           }}
           modules={[EffectCoverflow, Pagination, Navigation]}
           className="relative">
-          {users.map((user) => (
+          {users?.map((user) => (
             <SwiperSlide key={user.id}>
               <UserCard user={user} />
             </SwiperSlide>

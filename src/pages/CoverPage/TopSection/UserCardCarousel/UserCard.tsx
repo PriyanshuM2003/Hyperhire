@@ -11,26 +11,26 @@ const UserCard: React.FC<UserCardProps> = ({ user }) => {
   console.log(user);
   return (
     <>
-      <Card key={user.id} className="max-h-min w-full max-w-72">
+      <Card key={user?.id} className="max-h-min w-full max-w-72">
         <CardHeader className="items-center">
           <div className="relative">
             <div className="relative h-20 w-20">
               <Image
-                src={user.profileImage}
-                alt={`${user.name}'s profile`}
+                src={user?.profileImage}
+                alt={`${user?.name}'s profile`}
                 fill
                 className="object-cover h-20 w-20 rounded-full"
               />
             </div>
             <div className="absolute bottom-0 right-2 h-3 w-4">
-              <Image src={user.countryImage} alt={`${user.name}'s country`} fill className="object-cover h-3 w-4" />
+              <Image src={user?.countryImage} alt={`${user?.name}'s country`} fill className="object-cover h-3 w-4" />
             </div>
           </div>
-          <CardTitle className="text-lg">{user.name}</CardTitle>
-          <CardDescription className="font-semibold text-[#4A77FF]">{user.title}</CardDescription>
+          <CardTitle className="text-lg">{user?.name}</CardTitle>
+          <CardDescription className="font-semibold text-[#4A77FF]">{user?.title}</CardDescription>
         </CardHeader>
         <CardContent className="flex items-center gap-1 flex-wrap justify-center text-[#5E626F]">
-          {user.skills.map((skill, index) => (
+          {user?.skills.map((skill, index) => (
             <div key={index} className="p-1 px-2 border rounded-md">
               {skill}
             </div>
