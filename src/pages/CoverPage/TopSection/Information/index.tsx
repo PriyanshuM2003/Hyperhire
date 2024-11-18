@@ -1,17 +1,19 @@
 import React from 'react';
-import { Tooltip, TooltipContent, TooltipTrigger } from '@/components/ui/tooltip';
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
 
 const Information = () => {
   return (
     <div className="text-white space-y-12">
-      <Tooltip>
-        <TooltipTrigger>
-          <h2 className="text-5xl font-bold fade-in-up">최고의 실력을 가진 외국인 인재를 찾고 계신가요?</h2>
-        </TooltipTrigger>
-        <TooltipContent>
-          <p className="text-[#40E2E8]">풀타임, 파트타임</p>
-        </TooltipContent>
-      </Tooltip>
+      <TooltipProvider>
+        <Tooltip>
+          <TooltipTrigger>
+            <h2 className="text-5xl font-bold fade-in-up">최고의 실력을 가진 외국인 인재를 찾고 계신가요?</h2>
+          </TooltipTrigger>
+          <TooltipContent>
+            <p className="text-[#40E2E8]">풀타임, 파트타임</p>
+          </TooltipContent>
+        </Tooltip>
+      </TooltipProvider>
 
       <h3 className="text-3xl fade-in-up">법률 및 인사관리 부담없이 1주일 이내에 원격으로 채용해보세요.</h3>
       <h3 className="text-lg">개발자가 필요하신가요?</h3>
