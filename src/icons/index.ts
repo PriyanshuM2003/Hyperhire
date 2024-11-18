@@ -1,6 +1,7 @@
 import CodeIcon from './CodeIcon';
 import ComputerWatchIcon from './ComputerWatchIcon';
 import CubeIcon from './CubeIcon';
+import DollarIcon from './DollarIcon';
 import GalleryIcon from './GalleryIcon';
 import HyperHireColorIcon from './HyperHireColorIcon';
 import HyperHireWhiteIcon from './HyperHireWhiteIcon';
@@ -11,6 +12,7 @@ import SettingsIcon from './SettingsIcon';
 import TargetStarIcon from './TargetStarIcon';
 import UserIcon from './UserIcon';
 export {
+  DollarIcon,
   CodeIcon,
   ComputerWatchIcon,
   CubeIcon,

@@ -22,7 +22,7 @@ const chips: ChipData[] = [
 
 const ChipCardCarousel = () => {
   return (
-    <div className="pl-48">
+    <div className="pl-48 fade-in">
       <Swiper
         spaceBetween={4}
         slidesPerView={4}

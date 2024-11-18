@@ -2,6 +2,8 @@ import React from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import Image from 'next/image';
 import { UserData } from '@/types/UserDataType';
+import { Tooltip, TooltipContent, TooltipTrigger } from '@/components/ui/tooltip';
+import { DollarIcon } from '@/icons';
 
 interface UserCardProps {
   user: UserData;
@@ -11,6 +13,8 @@ const UserCard: React.FC<UserCardProps> = ({ user }) => {
   console.log(user);
   return (
     <>
+  <Tooltip>
+    <TooltipTrigger>
       <Card key={user?.id} className="max-h-min w-full max-w-72">
         <CardHeader className="items-center">
           <div className="relative">
@@ -36,7 +40,14 @@ const UserCard: React.FC<UserCardProps> = ({ user }) => {
             </div>
           ))}
         </CardContent>
-      </Card>
+      </Card></TooltipTrigger>
+    <TooltipContent className='flex items-center gap-2'>
+      <DollarIcon/>
+      <p className='text-[#00C696]'>월 100만원</p>
+    </TooltipContent>
+  </Tooltip>
+
+
     </>
   );
 };
